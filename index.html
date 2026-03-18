@@ -9,10 +9,10 @@
   <body class="flex">
     <main class="flex">
       <div class="background-section flex flex-column">
-        <div class="flex flex-center flex-wrap text-center">
+        <div class="logo-and-title flex flex-center flex-wrap text-center">
           <svg
-            width="40px"
-            height="40px"
+            width="50px"
+            height="50px"
             viewBox="0 0 40 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
                 15.207 35.2453L13.2021 38.8201C13.8407 39.051 14.4942 39.2501 15.1611 39.4159L16.9512 36.224C17.5694 35.1209 18.7357 
                 34.4377 20 34.4376C21.2645 34.4376 22.4305 35.1208 23.0488 36.224L24.8379 39.4159C25.5048 39.2502 26.1583 39.0509 
                 26.7969 38.8201L24.793 35.2453C23.8208 33.5111 21.9879 32.4372 20 32.4372Z"
-              fill="#D3E1DD"
+              fill="#FFFFFF"
             ></path>
           </svg>
           <h1>Lorem Ipsum</h1>
@@ -85,7 +85,7 @@
                 <label class="flex flex-column" for="email"
                   >Email
 
-                  <input type="email" id="email" name="email" />
+                  <input type="email" id="email" name="email" required />
                 </label>
                 <label class="flex flex-column" for="phone-number"
                   >Phone Number
@@ -97,7 +97,12 @@
               <div class="fields-row flex flex-wrap">
                 <label class="flex flex-column" for="password"
                   >Password
-                  <input type="password" id="password" name="password" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
                 </label>
                 <label class="flex flex-column" for="confirm-password"
                   >Confirm Password
@@ -105,6 +110,7 @@
                     type="password"
                     id="confirm-password"
                     name="confirm-password"
+                    required
                   />
                 </label>
               </div>

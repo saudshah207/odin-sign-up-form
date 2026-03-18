@@ -84,6 +84,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #ffffff;
+  --black: #000000;
+
+  --primary-color: #74c0c1;
+  --secondary-color: rgba(225 227 221 / 0.5);
+
+  --standard-box-shadow: 1px 2px 5px 0px rgba(0 0 0 / 0.1);
+}
+
 body {
   min-height: 100vh;
   align-items: stretch;
@@ -110,6 +120,10 @@ body {
   text-align: center;
 }
 
+a {
+  color: var(--black);
+}
+
 .background-section {
   flex-basis: 25%;
 
@@ -121,6 +135,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.logo-and-title {
+  color: var(--white);
+  background-color: rgba(0 0 0 / 0.1);
+  backdrop-filter: blur(10px);
+
+  padding: 1rem;
+  gap: 0.7rem;
 }
 
 .image-credit {
@@ -135,6 +158,8 @@ body {
 
   justify-content: center;
   gap: var(--vertical-gap);
+
+  background-color: var(--secondary-color);
 }
 
 .form-section > h2 {
@@ -142,9 +167,12 @@ body {
 }
 
 .white-background-wrapper {
-  margin-block: var(--vertical-gap);
+  background-color: var(--white);
 
-  padding: 1rem var(--inline-padding) 2rem;
+  margin-block: var(--vertical-gap);
+  padding: 1rem var(--inline-padding) 1.5rem;
+
+  box-shadow: var(--standard-box-shadow);
 }
 
 .white-background-content {
@@ -171,6 +199,25 @@ label {
   flex: 1;
 }
 
+input {
+  border: 1px solid rgba(0 0 0 / 0.2);
+  border-radius: 0.25rem;
+
+  padding: 0.25rem 0.5rem;
+}
+
+input:focus,
+input:focus-visible {
+  box-shadow: var(--standard-box-shadow);
+
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+input:invalid {
+  border: 1px solid rgba(255 0 0 / 0.5);
+}
+
 .form-section > h2,
 .form-section .white-background-wrapper,
 .form-section .form-footer {
@@ -179,4 +226,21 @@ label {
 
 .submit-button {
   margin-bottom: var(--vertical-gap);
+
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 600;
+
+  padding: 0.85rem 2.5rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--standard-box-shadow);
+
+  cursor: pointer;
+}
+
+.login-instead > a {
+  color: var(--primary-color);
+  font-weight: 600;
 }
