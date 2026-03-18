@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Sign Up Form</title>
   </head>
-  <body>
-    <main>
-      <div>
-        <div>
+  <body class="flex">
+    <main class="flex">
+      <div class="background-section flex flex-column">
+        <div class="flex flex-center flex-wrap text-center">
           <svg
             width="40px"
             height="40px"
@@ -41,7 +41,7 @@
           </svg>
           <h1>Lorem Ipsum</h1>
         </div>
-        <div class="image-credit">
+        <div class="image-credit text-center">
           <p>
             Photo by
             <a href="https://unsplash.com/@anniespratt" target="_blank"
@@ -56,38 +56,67 @@
           </p>
         </div>
       </div>
-      <div>
+      <div class="form-section flex flex-column">
         <h2>
           This is not real online service! You know you need something like this
-          in your life to help you realize your deepest dreams. Sign up now to
-          get started.
+          in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
         </h2>
 
-        <h2>
-          You know you want to.
-        </h2>
+        <h2>You <em>know</em> you want to.</h2>
 
         <form action="">
-            <div>
-                <h3>Let's do this!</h3>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password">
+          <div class="white-background-wrapper">
+            <div class="white-background-content">
+              <h3>Let's do this!</h3>
+
+              <div class="fields-row flex flex-wrap">
+                <label class="flex flex-column" for="first-name"
+                  >First Name
+                  <input type="text" id="first-name" name="first-name" />
+                </label>
+                <label class="flex flex-column" for="last-name"
+                  >Last Name
+                  <input type="text" id="last-name" name="last-name" />
+                </label>
+              </div>
+
+              <div class="fields-row flex flex-wrap">
+                <label class="flex flex-column" for="email"
+                  >Email
+
+                  <input type="email" id="email" name="email" />
+                </label>
+                <label class="flex flex-column" for="phone-number"
+                  >Phone Number
+
+                  <input type="tel" id="phone-number" name="phone-number" />
+                </label>
+              </div>
+
+              <div class="fields-row flex flex-wrap">
+                <label class="flex flex-column" for="password"
+                  >Password
+                  <input type="password" id="password" name="password" />
+                </label>
+                <label class="flex flex-column" for="confirm-password"
+                  >Confirm Password
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                  />
+                </label>
+              </div>
             </div>
+          </div>
 
-            <button type="submit">Create Account</button>
-
-            <p>Already have an account? <a href="#">Log in</a></p>
+          <footer class="form-footer">
+            <button type="submit" class="submit-button">Create Account</button>
+            <p class="login-instead">
+              Already have an account? <a href="#">Log in</a>
+            </p>
+          </footer>
         </form>
       </div>
     </main>
